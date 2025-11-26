@@ -1,0 +1,378 @@
+  body {
+    margin: 0;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #background-carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .carousel-item {
+    height: 100vh;
+    position: relative;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  header {
+    position: relative;
+    z-index: 10;
+  }
+
+  .welcome-section {
+    position: relative;
+    padding: 200px 0;
+    z-index: 10;
+  }
+
+  .welcome-section h1 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .welcome-section p {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar {
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-logo {
+    height: 60px;
+    margin-right: 1em;
+  }
+
+  .navbar-brand {
+    margin-left: 2em;
+  }
+
+  .navbar-title {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .navbar-menu {
+    margin-left: auto;
+  }
+
+  .nav {
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    color: white !important;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  .btn-index {
+    background-color: #e63946;
+    color: white !important;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem !important;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-index:hover {
+    background-color: #fa0015;
+  }
+
+  .btn-danger {
+    background-color: #e63946;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-danger:hover {
+    background-color: #d62828;
+    transform: scale(1.05);
+  }
+
+  .modal-dialog.modal-dialog-slideout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    margin: 0;
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+  }
+
+  .modal-header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-bottom: none;
+    padding: 1rem;
+  }
+
+  .modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .modal-body {
+    padding: 20px;
+    overflow-y: auto;
+    color: white;
+  }
+
+  .modal-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .modal-body .form-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .modal-body .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .modal-body .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: none;
+  }
+
+  .modal-body .btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .modal-body .btn-primary {
+    background-color: #e63946;
+    border: none;
+  }
+
+  .modal-body .btn-primary:hover {
+    background-color: #d62828;
+  }
+
+  .modal-body .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+  .modal-body .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .modal-footer {
+    border-top: none;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-footer .btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .modal-footer .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+  .modal-footer .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .modal-body a {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .modal-body a:hover {
+    color: #d62828;
+  }
+
+  .modal-body .form-control {
+    margin-bottom: 1rem;
+  }
+
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  header,
+  .welcome-section {
+    animation: aparecer 1.5s ease-in-out;
+  }
+
+
+  @keyframes arriba {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .welcome-section h1,
+  .welcome-section p,
+  .welcome-section .btn {
+    animation: arriba 1s ease-out;
+  }
+
+  .hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+
+  .titulo {
+    text-decoration: none;
+    color: white;
+  }
+
+  .button_slide {
+    color: #FFF;
+    border: 2px solid #FFF;
+    padding: 18px 36px;
+    display: inline-block;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #d62828;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    margin-top: 30px;
+  }
+
+  .slide_down:hover {
+    box-shadow: inset 0 100px 0 0 #d62828;
+  }
+
+  .account-icon {
+    font-size: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .account-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e63946;
+  }
+
+
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e63946;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .profile-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .toast-body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+  }
+
+  .btn-close {
+    filter: invert(1);
+  }
